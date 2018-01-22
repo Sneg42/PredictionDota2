@@ -33,5 +33,12 @@ def predict_proba (pred_prob, perc):
                 continue
         return np.array(arr);
 
+# Создать и обучить модель с выводом процента предсказания
+def learn_algoritm(algoritm, X_train, y_train, X_test, y_test):
+    model = algoritm
+    model.fit(X_train, y_train)
+    print ('Обучающие данные - ', model.score(X_train, y_train))
+    print ('Тестовые данные - ', model.score(X_test, y_test))      
+    return model
 
 
