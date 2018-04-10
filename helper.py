@@ -149,3 +149,8 @@ def get_data_for_match(ID, matches_df, len_picks:"Длина пиков", file_n
         except Exception as e :
             print ('ID матча - ', ID)
             print (e)
+# Вытащить данные с Opendota через SQL запрос            
+def query_opendota(sql):
+    resp = requests.get('https://api.opendota.com/api/explorer', params={'sql': sql})
+    data = resp.json()
+    return pd.DataFrame.from_records(data['rows'])
