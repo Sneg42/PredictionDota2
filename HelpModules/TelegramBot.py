@@ -2,7 +2,7 @@ import sys
 sys.path.append('C:\\Users\\User\\1_MY_WORK\\1_Data_Scientist_and_ML_Project\\PredictionDota2\\HelpModules')
 import collections
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from Prediction import Prediction, Features
+from prediction import Prediction, Features
 
 class TelegramBot:
     def __init__(self, TOKEN, REQUEST_KWARGS):
